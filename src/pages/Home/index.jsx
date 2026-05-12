@@ -31,9 +31,9 @@ function Home() {
             </section>
 
             <section id="locations" className="dashboard-section">
-                <h1 className="home-title">
+                <h2 className="home-title">
                     Chez vous, partout et ailleurs
-                </h1>
+                </h2>
 
                 <div className="locations-grid">
                     {recentLocations.map((location) => (
