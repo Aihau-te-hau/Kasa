@@ -1,0 +1,20 @@
+.footer {
+    background-color: black;
+}
+
+h1, p {
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
