@@ -26,9 +26,6 @@ function Home() {
 
     return (
         <div className="page">
-            <section id="dashboard" className="page-header">
-                <Header />
-            </section>
 
             <section id="locations" className="dashboard-section">
                 <h2 className="home-title">
@@ -45,9 +42,6 @@ function Home() {
                 </div>
             </section>
 
-            <section id="page-footer">
-                <Footer />
-            </section>
         </div>
     )
 }

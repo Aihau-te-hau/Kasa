@@ -6,7 +6,7 @@ import { getPropertyById } from '../../api/properties'
 import Slideshow from '../../components/Slideshow'
 import Collapse from '../../components/Collapse'
 
-import './Property.scss'
+import './PropertyDetail.scss'
 
 function Property() {
     const { id } = useParams()

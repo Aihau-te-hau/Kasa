@@ -12,7 +12,7 @@ function Collapse({ title, content }) {
                 className="collapse-header"
                 onClick={() => setIsOpen(!isOpen)}
             >
-                <h2>{title}</h2>
+                <h3>{title}</h3>
 
                 <span>
                     {isOpen ? '⌃' : '⌄'}
