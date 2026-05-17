@@ -3,7 +3,7 @@
     flex-direction: column;
     gap: 30px;
 
-    padding: 0 0px 50px;
+    padding: 0 100px 50px;
 }
 
 .property-slideshow {
@@ -30,8 +30,6 @@
 }
 
 .property-location {
-    color: #ff6060;
-
     font-size: 18px;
     font-weight: 500;
 }
@@ -52,6 +50,15 @@
 
 .property-collapse {
     width: 50%;
+}
+
+.property-description {
+    text-align: justify;
+}
+
+.equipment-list {
+    list-style: none;
+    padding-left: 20px;
 }
 
 @media screen and (max-width: 768px) {

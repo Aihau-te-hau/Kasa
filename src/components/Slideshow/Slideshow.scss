@@ -27,7 +27,13 @@
     cursor: pointer;
 }
 
-.slideshow-button.prev {
+.slideshow-button img {
+    width: 46px;
+
+    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.6));
+}
+
+.slideshow-button.previous {
     left: 20px;
 }
 
@@ -62,6 +68,8 @@
 
     .slideshow-button img {
         width: 12px;
+
+        filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.7));
     }
 
     .slideshow-counter {

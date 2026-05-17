@@ -15,7 +15,9 @@ function Collapse({ title, content }) {
                 className="collapse-header"
                 onClick={() => setIsOpen(!isOpen)}
             >
-                <h3>{title}</h3>
+                <h3 className="collapse-title">
+                    {title}
+                </h3>
 
                 <span>
                     {isOpen ? (

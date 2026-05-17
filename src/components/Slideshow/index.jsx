@@ -36,14 +36,14 @@ function Slideshow({ pictures }) {
             {pictures.length > 1 && (
                 <>
                     <button
-                        className="left-arrow"
+                        className="slideshow-button previous"
                         onClick={prevSlide}
                     >
                         <img src={previousPicture} alt="Previous" />
                     </button>
 
                     <button
-                        className="right-arrow"
+                        className="slideshow-button next"
                         onClick={nextSlide}
                     >
                         <img src={nextPicture} alt="Next" />

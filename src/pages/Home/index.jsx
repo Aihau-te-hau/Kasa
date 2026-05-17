@@ -28,9 +28,12 @@ function Home() {
         <div className="page">
 
             <section id="locations" className="dashboard-section">
-                <h2 className="home-title">
-                    Chez vous, partout et ailleurs
-                </h2>
+                <div>
+                    <h1 className="home-title">
+                        Chez vous, partout et ailleurs
+                    </h1>
+                </div>
+                
 
                 <div className="locations-grid">
                     {recentLocations.map((location) => (

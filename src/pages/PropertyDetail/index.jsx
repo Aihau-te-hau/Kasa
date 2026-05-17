@@ -67,7 +67,7 @@ function Property() {
 
             <div className="property-collapses">
 
-                <div className="property-collapse">
+                <div className="property-collapse property-description">
                     <Collapse
                     title="Description"
                     content={property.description}
@@ -75,11 +75,11 @@ function Property() {
                 </div>
                 
 
-                <div className="property-collapse">
+                <div className="property-collapse property-equipments">
                     <Collapse
                         title="Équipements"
                         content={
-                            <ul>
+                            <ul className="equipment-list">
                                 {property.equipments.map((equipment) => (
                                     <li key={equipment}>
                                         {equipment}
