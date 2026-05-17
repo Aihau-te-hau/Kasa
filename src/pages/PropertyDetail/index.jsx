@@ -5,6 +5,9 @@ import { getPropertyById } from '../../api/properties'
 
 import Slideshow from '../../components/Slideshow'
 import Collapse from '../../components/Collapse'
+import Tags from '../../components/Tags'
+import Rating from '../../components/Rating'
+import Host from '../../components/Host'
 
 import './PropertyDetail.scss'
 
@@ -33,73 +36,59 @@ function Property() {
     }
 
     return (
-        <div className="property-page">
+        <div className="property-detail">
 
-            <Slideshow pictures={property.pictures} />
+            <div className="property-slideshow">
+                <Slideshow pictures={property.pictures} />
+            </div>
+            
 
             <div className="property-header">
 
-                <div>
-                    <h1>{property.title}</h1>
+                <div className="property-info">
+                    <h1 className="property-title">
+                        {property.title}
+                    </h1>
 
-                    <p>{property.location}</p>
+                    <p className="property-location">
+                        {property.location}
+                    </p>
 
-                    <div className="tags">
-                        {property.tags.map((tag) => (
-                            <span key={tag} className="tag">
-                                {tag}
-                            </span>
-                        ))}
-                    </div>
+                    <Tags tags={property.tags} />
                 </div>
 
-                <div className="property-host">
+                <div className="property-meta">
 
-                    <div className="host-info">
-                        <span>{property.host.name}</span>
+                    <Host host={property.host} />
 
-                        <img
-                            src={property.host.picture}
-                            alt={property.host.name}
-                        />
-                    </div>
-
-                    <div className="rating">
-                        {[1, 2, 3, 4, 5].map((star) => (
-                            <span
-                                key={star}
-                                className={
-                                    star <= property.rating
-                                        ? 'star active'
-                                        : 'star'
-                                }
-                            >
-                                ★
-                            </span>
-                        ))}
-                    </div>
+                    <Rating rating={property.rating} />
                 </div>
             </div>
 
             <div className="property-collapses">
 
-                <Collapse
+                <div className="property-collapse">
+                    <Collapse
                     title="Description"
                     content={property.description}
                 />
+                </div>
+                
 
-                <Collapse
-                    title="Équipements"
-                    content={
-                        <ul>
-                            {property.equipments.map((equipment) => (
-                                <li key={equipment}>
-                                    {equipment}
-                                </li>
-                            ))}
-                        </ul>
-                    }
-                />
+                <div className="property-collapse">
+                    <Collapse
+                        title="Équipements"
+                        content={
+                            <ul>
+                                {property.equipments.map((equipment) => (
+                                    <li key={equipment}>
+                                        {equipment}
+                                    </li>
+                                ))}
+                            </ul>
+                        }
+                    />
+                </div>
             </div>
         </div>
     )

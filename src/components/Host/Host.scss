@@ -1,0 +1,42 @@
+.host {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.host-name {
+    width: 90px;
+
+    color: #ff6060;
+
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+
+    text-align: right;
+}
+
+.host-picture {
+    width: 64px;
+    height: 64px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+
+    .host-name {
+        width: 70px;
+
+        font-size: 12px;
+    }
+
+    .host-picture {
+        width: 32px;
+        height: 32px;
+    }
+
+}

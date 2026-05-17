@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import './Slideshow.scss'
 
+import nextPicture from '../../assets/img/next.svg'
+import previousPicture from '../../assets/img/previous.svg'
+
 function Slideshow({ pictures }) {
 
     const [current, setCurrent] = useState(0)
@@ -36,19 +39,19 @@ function Slideshow({ pictures }) {
                         className="left-arrow"
                         onClick={prevSlide}
                     >
-                        ❮
+                        <img src={previousPicture} alt="Previous" />
                     </button>
 
                     <button
                         className="right-arrow"
                         onClick={nextSlide}
                     >
-                        ❯
+                        <img src={nextPicture} alt="Next" />
                     </button>
 
-                    <span className="slide-count">
+                    {/* <span className="slide-count">
                         {current + 1}/{pictures.length}
-                    </span>
+                    </span> */}
                 </>
             )}
         </div>

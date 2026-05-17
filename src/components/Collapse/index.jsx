@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import './Collapse.scss'
 
+import deployed from '../../assets/img/arrow_deployed.svg'
+import collapsed from '../../assets/img/arrow_collapsed.svg'
+
 function Collapse({ title, content }) {
 
     const [isOpen, setIsOpen] = useState(false)
@@ -15,7 +18,11 @@ function Collapse({ title, content }) {
                 <h3>{title}</h3>
 
                 <span>
-                    {isOpen ? '⌃' : '⌄'}
+                    {isOpen ? (
+                        <img src={deployed} alt="Deployed" />
+                    ) : (
+                        <img src={collapsed} alt="Collapsed" />
+                    )}
                 </span>
             </div>
 

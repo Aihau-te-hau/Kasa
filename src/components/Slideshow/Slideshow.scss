@@ -1,0 +1,71 @@
+.slideshow {
+    position: relative;
+
+    width: 100%;
+    height: 415px;
+}
+
+.slideshow-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+}
+
+// Styles pour les boutons de navigation et le compteur
+.slideshow-button {
+    position: absolute;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+}
+
+.slideshow-button.prev {
+    left: 20px;
+}
+
+.slideshow-button.next {
+    right: 20px;
+}
+
+// Styles pour les counteurs
+.slideshow-counter {
+    position: absolute;
+
+    bottom: 25px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: white;
+
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+
+    .slideshow {
+        height: 255px;
+    }
+
+    .slideshow-image {
+        border-radius: 10px;
+    }
+
+    .slideshow-button img {
+        width: 12px;
+    }
+
+    .slideshow-counter {
+        display: none;
+    }
+
+}

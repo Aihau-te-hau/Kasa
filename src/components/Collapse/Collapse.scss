@@ -1,0 +1,56 @@
+.collapse {
+    width: 100%;
+}
+
+.collapse-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 15px;
+
+    background-color: #ff6060;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.collapse-title {
+    color: white;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+// Styles pour le contenu
+.collapse-content {
+    padding: 20px;
+
+    background-color: #f6f6f6;
+
+    border-radius: 0 0 10px 10px;
+
+    color: #ff6060;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+@media screen and (max-width: 768px) {
+
+    .collapse-header {
+        padding: 10px;
+    }
+
+    .collapse-title {
+        font-size: 13px;
+    }
+
+    .collapse-content {
+        padding: 15px;
+
+        font-size: 12px;
+    }
+
+}

@@ -1,15 +1,51 @@
-header {
+.header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    justify-content: space-between;
+
+    padding: 45px 0px;
 }
 
-nav {
-    display: flex;
-    gap: 20px;
+.header-logo img {
+    width: 210px;
+}
 
-    &:hover {
-        text-decoration: underline;
+.nav {
+    display: flex;
+    gap: 57px;
+}
+
+.nav-link {
+    color: black;
+
+    font-size: 24px;
+    font-weight: 500;
+
+    text-decoration: none;
+}
+
+.nav-link.active {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+
+    .header {
+        padding: 20px;
     }
+
+    .header-logo img {
+        width: 145px;
+    }
+
+    .nav {
+        gap: 20px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+
+        text-transform: uppercase;
+    }
+
 }
