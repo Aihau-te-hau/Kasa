@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react';
 
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import LocationCard from '../../components/PropertyCard';
+import PropertyCard from '../../components/PropertyCard';
 
 import { getProperties } from '../../api/Properties';
+import bannerImage from '../../assets/img/home_banner.png';
 
 import './Home.scss'
 
@@ -25,24 +26,31 @@ function Home() {
     const recentLocations = locations.slice(0, 6)
 
     return (
-        <div className="page">
+        <div className="home">
 
-            <section id="locations" className="dashboard-section">
-                <div>
-                    <h1 className="home-title">
-                        Chez vous, partout et ailleurs
-                    </h1>
-                </div>
-                
+            <section className="home-banner">
 
-                <div className="locations-grid">
-                    {recentLocations.map((location) => (
-                        <LocationCard
-                            key={location.id}
-                            location={location}
-                        />
-                    ))}
-                </div>
+                <img
+                    src={bannerImage}
+                    alt="Paysage"
+                    className="home-banner-image"
+                />
+
+                <div className="home-banner-overlay"></div>
+
+                <h1 className="home-title">
+                    Chez vous, partout et ailleurs
+                </h1>
+
+            </section>
+
+            <section className="properties-gallery">
+                {recentLocations.map((property) => (
+                    <PropertyCard
+                        key={property.id}
+                        property={property}
+                    />
+                ))}
             </section>
 
         </div>

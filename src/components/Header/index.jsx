@@ -8,6 +8,7 @@ function Header() {
     return (
         <header className="header">
 
+            {/* Ajout du logo cliquable qui redirige vers la page d'accueil */}
             <NavLink
                 to="/"
                 className="header-logo"

@@ -1,0 +1,69 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-bottom: 50px;
+}
+
+.about-banner {
+    position: relative;
+    width: 100%;
+    height: 223px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.about-banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.about-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+}
+
+// Ajout d'un background-color pour différencier les valeurs du reste de la page
+.about-values {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px;
+    background-color: #f6f6f6;
+    border-radius: 25px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .about {
+        gap: 22px;
+        padding-bottom: 27px;
+    }
+
+    .about-banner {
+        height: 111px;
+        border-radius: 10px;
+    }
+
+    .about-title {
+        left: 20px;
+        transform: translateY(-50%);
+        width: 220px;
+        font-size: 24px;
+        text-align: left;
+    }
+
+}

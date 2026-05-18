@@ -1,38 +1,63 @@
-.error-container {
+// Peut être modifier le style pour que la page soit entièrement contenue sur la page sans scoller
+.error {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+     
+    gap: 80px;
+
+    padding: 60px 0 80px;
+
     text-align: center;
 }
 
-.error-title {
-    font-size: 5rem;
-    color: #FF6060;
+.error-code {
+    color: #ff6060;
+    font-size: 288px;
+    font-weight: 700;
+    line-height: 1;
 }
 
-.error-message {
-    font-size: 3rem;
-    color: #FF6060;
-    margin-top: 2rem;
+.error-text {
+    color: #ff6060;
+
+    font-size: 36px;
+    font-weight: 500;
+
+    text-align: center;
 }
 
 .error-link {
-    display: block;
-    margin-top: 1rem;
-    font-size: 1.5rem;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
 
     &:hover {
         text-decoration: underline;
     }
 }
 
-@media (max-width: 768px) {
-    .error-title {
-        font-size: 3rem;
+@media screen and (max-width: 768px) {
+
+    .error-page {
+        gap: 110px;
+        padding: 110px 0;
     }
 
-    .error-message {
-        font-size: 1.5rem;
+    .error-code {
+        font-size: 96px;
+    }
+
+    .error-text {
+        width: 260px;
+
+        font-size: 18px;
     }
 
     .error-link {
-        font-size: 1rem;
+        font-size: 14px;
     }
+
 }
