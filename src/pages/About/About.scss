@@ -36,14 +36,14 @@
     text-align: center;
 }
 
-// Ajout d'un background-color pour différencier les valeurs du reste de la page
+// Peut être ajout d'un background-color pour différencier les valeurs du reste de la page
 .about-values {
     display: flex;
     flex-direction: column;
-    gap: 50px;
-    padding: 50px;
-    background-color: #f6f6f6;
-    border-radius: 25px;
+    gap: 30px;
+    // padding: 40px;
+    // background-color: #f6f6f6;
+    // border-radius: 25px;
 }
 
 @media screen and (max-width: 768px) {
