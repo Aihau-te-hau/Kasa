@@ -33,6 +33,7 @@ function Slideshow({ pictures }) {
                 className="slideshow-image"
             />
 
+            {/* Affichage des boutons de navigation et du compteur uniquement s'il y a plus d'une image */}
             {pictures.length > 1 && (
                 <>
                     <button
