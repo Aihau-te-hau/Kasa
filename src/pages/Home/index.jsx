@@ -23,7 +23,7 @@ function Home() {
     }, [])
 
     // Affichage des 6 premières locations
-    const recentLocations = locations.slice(0, 6)
+    const recentLocations = locations.slice(0, 100)
 
     return (
         <div className="home">
