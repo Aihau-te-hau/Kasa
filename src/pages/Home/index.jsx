@@ -10,20 +10,29 @@ import bannerImage from '../../assets/img/home_banner.png';
 import './Home.scss'
 
 function Home() {
-    const [locations, setLocations] = useState([])
+    const [properties, setProperties] = useState([])
 
     useEffect(() => {
         getProperties()
             .then((data) => {
-                setLocations(data)
+                setProperties(data)
             })
             .catch((error) => {
                 console.error(error)
             })
     }, [])
 
-    // Affichage des 6 premières locations
-    const recentLocations = locations.slice(0, 100)
+    // Affichage des n premières locations
+    // const recentProperties = properties.slice(0, n)
+    // Peut être remplacer par (erreur possible) :
+    const recentProperties = properties
+    // Et meme peut être remplacer l.51 à 56 par (et la déclaration de recentProperties peut être supprimée) :
+    // {locations.map((location) => (
+    //  <PropertyCard
+    //    key={location.id}
+    //    location={location}
+    //  />
+    // ))}
 
     return (
         <div className="home">
@@ -45,7 +54,7 @@ function Home() {
             </section>
 
             <section className="properties-gallery">
-                {recentLocations.map((property) => (
+                {recentProperties.map((property) => (
                     <PropertyCard
                         key={property.id}
                         property={property}
