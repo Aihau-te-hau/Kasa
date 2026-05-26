@@ -49,9 +49,9 @@ function Slideshow({ pictures }) {
                         <img src={nextPicture} alt="Next" />
                     </button>
 
-                    {/* <span className="slide-count">
+                    <span className="slideshow-counter">
                         {current + 1}/{pictures.length}
-                    </span> */}
+                    </span>
                 </>
             )}
         </div>
