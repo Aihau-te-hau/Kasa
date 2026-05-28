@@ -22,6 +22,13 @@ createRoot(document.getElementById('root')).render(
 
       <Routes>
 
+        {/* 
+        !!! important !!!
+        Le "Layout" doit être défini dans une route et non autour de "Router".
+        Layout connait les routes enfants et utilise "Outlet" pour les afficher.
+        Ainsi il est controlé par "React Router". Cela évite d'être tt le tps affiché si autour de "Router".
+        Cela permet aussi d'avoir pls layouts (ex: adminLayout) et de les différencier selon les routes.
+        */}
         <Route element={<Layout />}>
 
           <Route path="/" element={<Home />} />

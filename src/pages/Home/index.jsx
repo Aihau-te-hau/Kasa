@@ -12,6 +12,7 @@ import './Home.scss'
 function Home() {
     const [properties, setProperties] = useState([])
 
+    // ici [] signifie que useEffect ne s'exécute qu'une seule fois au montage du composant
     useEffect(() => {
         getProperties()
             .then((data) => {

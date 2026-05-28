@@ -10,6 +10,7 @@ function Layout() {
             <Header />
 
             <main className="layout-content">
+                {/* Outlet permet d'insérer les routes enfants de Layout (Home, About, Error, PropertyDetail) */}
                 <Outlet />
             </main>
             

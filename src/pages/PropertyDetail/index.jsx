@@ -17,6 +17,7 @@ function Property() {
     const [property, setProperty] = useState(null)
     const [error, setError] = useState(false)
 
+    // ici [id] signifie que useEffect s'exécute à chaque fois que "id" change (ex: navigation vers une autre propriété)
     useEffect(() => {
         getPropertyById(id)
             .then((data) => {
