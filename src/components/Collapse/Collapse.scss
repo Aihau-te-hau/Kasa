@@ -35,6 +35,18 @@
     line-height: 1.4;
 }
 
+// Styles pour la flèche
+.collapse-arrow {
+    transition: transform 0.3s ease;
+
+    width: 24px;
+    height: 24px;
+
+    &.open {
+        transform: rotate(-180deg);
+    }
+}
+
 @media screen and (max-width: 768px) {
 
     .collapse-header {
@@ -43,6 +55,11 @@
 
     .collapse-title {
         font-size: 13px;
+    }
+
+    .collapse-arrow {
+        width: 18px;
+        height: 18px;
     }
 
     .collapse-content {

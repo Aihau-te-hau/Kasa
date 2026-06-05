@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import './Collapse.scss'
 
-import deployed from '../../assets/img/arrow_deployed.svg'
-import collapsed from '../../assets/img/arrow_collapsed.svg'
+// import deployed from '../../assets/img/arrow_deployed.svg'
+import arrow from '../../assets/img/arrow_collapsed.svg'
 
 function Collapse({ title, content }) {
 
@@ -20,11 +20,14 @@ function Collapse({ title, content }) {
                 </h3>
 
                 <span>
-                    {isOpen ? (
-                        <img src={deployed} alt="Deployed" />
-                    ) : (
-                        <img src={collapsed} alt="Collapsed" />
-                    )}
+                    <img
+                        src={arrow}
+                        alt="Toggle collapse"
+                        className={`collapse-arrow ${isOpen 
+                            ? 'open' 
+                            : ''}`
+                        }
+                    />
                 </span>
             </div>
 
